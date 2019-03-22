@@ -6,7 +6,9 @@ export default {
 		Frame
 	},
 	props: {
-		text: String
+		text: String,
+		highlightedCharacterIndex: Number,
+		gameInteractable: Boolean
 	},
 	data() {
 		return {
@@ -27,7 +29,7 @@ export default {
 </script>
 
 <template>
-	<div class="character-grid" :class="{loaded: loaded}">
+	<div class="character-grid" :class="{loaded: loaded, interactable: gameInteractable}">
 		<Frame />
 		<span
 			v-for="(character, i) in characters"
@@ -35,13 +37,12 @@ export default {
 			:class="{
 				dark: i > 9 && i < 20,
 				light: i < 5 || i > 24,
-				flipped: i < 10 || i > 19
+				flipped: i < 10 || i > 19,
+				highlighted: i === highlightedCharacterIndex
 			}"
 			class="character"
 			@click="$emit('character-clicked', i)"
-		>
-			{{ character }}
-		</span>
+		>{{ character }}</span>
 	</div>
 </template>
 
@@ -54,6 +55,8 @@ div.character-grid
 	height: calc(100vh - #{$padding})
 	width: calc(100vw - #{$padding})
 	position: relative
+	&:not(.interactable)
+		pointer-events: none
 
 .character
 	// Other font options: Bungee Hairline, Megrim, Limelight, Cabin Sketch, Fredericka the Great, Major Mono Display
@@ -77,12 +80,16 @@ div.character-grid
 		color: rgba(0, 0, 0, 0.15)
 	&.flipped
 		transform: rotateX(180deg)
+	&.highlighted
+		background-color: red !important
 
 .loaded .character
 	opacity: 1
 
-@for $i from 1 through 30
-	.character:nth-of-type(#{$i})
-		transition-delay: calc(#{$i} * 0.03s)
+// @for $i from 1 through 30
+// 	.character:nth-of-type(#{$i})
+// 		// transition-delay: calc(#{$i} * 0.03s)
+// 		transition: opacity 0.5s ease calc(#{$i} * 0.03s)
+// 		// transition: property name | duration | timing function | delay
 
 </style>
