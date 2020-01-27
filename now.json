@@ -4,17 +4,17 @@
   "scope": "darylpinto",
   "redirects": [
     {
-      "source": "/dice/?",
+      "source": "/dice/",
       "destination": "https://darylpinto.github.io/dice/",
       "statusCode": 301
     },
 		{
-      "source": "/barns-cows/?",
+      "source": "/barns-cows/",
       "destination": "https://darylpinto.github.io/barns-cows/",
       "statusCode": 301
 		},
 		{
-      "source": "/anotherone/?",
+      "source": "/anotherone/",
       "destination": "https://darylpinto.github.io/anotherone/",
       "statusCode": 301
     }
