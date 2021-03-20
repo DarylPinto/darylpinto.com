@@ -4,7 +4,10 @@
 
 ## Build Setup
 
-``` bash
+```bash
+# use the correct version of node for this project
+$ nvm use
+
 # install dependencies
 $ yarn install
 
