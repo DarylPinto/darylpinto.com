@@ -1,0 +1,87 @@
+// BRAND COLORS
+
+// !!! CHANGE THESE COLORS IN CONSTANTS.TS AS WELL !!!
+
+$primary: #e92236;
+$secondary: #16dbc7;
+$secondary-invert: findColorInvert($secondary) !default;
+
+// OTHER COLORS
+$info: #209cee;
+$success: #23d160;
+$warning: #ffdd57;
+$danger: #ff3860;
+$light: #f2f3f3;
+$dark: #272d3a;
+
+$custom-colors: (
+	"secondary": (
+		$secondary,
+		$secondary-invert,
+	),
+);
+
+// TEXT
+$text: #4a4a4a;
+$link: #3273dc;
+$body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+	"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+	"Helvetica", "Arial", sans-serif;
+$body-line-height: 1.8em;
+$title-family: false;
+$button-family: false;
+
+// BREAKPOINTS
+$gap: 32px;
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+$mobile-down: "screen and (max-width: #{$tablet})";
+$tablet-down: "screen and (max-width: #{$desktop})";
+$desktop-up: "screen and (max-width: #{$widescreen})";
+
+$tablet-up: "screen and (min-width: #{$tablet})";
+$desktop-up: "screen and (min-width: #{$desktop})";
+$widescreen-up: "screen and (min-width: #{$widescreen})";
+
+// MOBILE FONT SIZE
+$mobile-font-size: 1rem;
+$mobile-line-height: 2rem;
+
+// LAYOUT
+$section-padding: 3rem 1.5rem;
+$section-padding-medium: 6rem 1.5rem;
+$section-padding-large: 9rem 1.5rem;
+
+$navigation-height: 85px;
+
+$blog-width: 750px;
+
+$card-border-radius: 7px;
+
+// SPACING HELPERS (.mt-3, .mx-auto, .p-5, etc)
+$spacing-shortcuts: (
+	"margin": "m",
+	"padding": "p",
+);
+$spacing-directions: (
+	"top": "t",
+	"right": "r",
+	"bottom": "b",
+	"left": "l",
+);
+$spacing-horizontal: "x";
+$spacing-vertical: "y";
+$spacing-values: (
+	"0": 0,
+	"1": 0.25rem,
+	"2": 0.5rem,
+	"3": 1rem,
+	"4": 1.5rem,
+	"5": 3rem,
+	"auto": auto,
+);

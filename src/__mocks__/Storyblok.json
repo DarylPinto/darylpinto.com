@@ -1,0 +1,63 @@
+{
+	"/home": {
+		"data": {
+			"story": {
+				"name": "Home",
+				"created_at": "2020-07-21T20:58:53.782Z",
+				"published_at": "2020-11-03T03:54:43.451Z",
+				"alternates": [],
+				"id": 15921178,
+				"uuid": "7a242807-a9c0-42c7-b3b5-2bd117b0348d",
+				"content": {
+					"_uid": "78f060f2-c372-4699-810f-59fc1fbff5a6",
+					"body": [
+						{
+							"_uid": "ee9540d8-c782-45c4-85c6-bb20a4876a56",
+							"_editable": "<!--#storyblok#{\"name\": \"sample\", \"space\": \"0\", \"uid\": \"ee9540d8-c782-45c4-85c6-bb20a4876a56\", \"id\": \"15921178\"}-->",
+							"component": "sample",
+							"heading": "NextJS/Storyblok Template",
+							"subtitle": "by Snakebyte Studios"
+						}
+					],
+					"component": "page",
+					"_editable": "<!--#storyblok#{\"name\": \"page\", \"space\": \"0\", \"uid\": \"78f060f2-c372-4699-810f-59fc1fbff5a6\", \"id\": \"15921178\"}-->"
+				},
+				"slug": "home",
+				"full_slug": "home",
+				"default_full_slug": null,
+				"sort_by_date": null,
+				"position": 0,
+				"tag_list": [],
+				"is_startpage": false,
+				"parent_id": 0,
+				"meta_data": null,
+				"group_id": "52f4dbdc-db92-46e5-9596-d6d40e2ee796",
+				"first_published_at": "2020-07-23T05:17:58.000Z",
+				"release_id": null,
+				"lang": "default",
+				"path": "/",
+				"translated_slugs": []
+			}
+		},
+		"headers": {
+			"content-type": "application/json; charset=utf-8",
+			"content-length": "15455",
+			"connection": "close",
+			"cache-control": "max-age=0, private, must-revalidate",
+			"date": "Mon, 07 Dec 2020 18:34:02 GMT",
+			"etag": "W/\"e1a2a88b170a14cccb8ed77fc4ea7cc4\"",
+			"link": "",
+			"server": "nginx/1.12.1",
+			"x-content-type-options": "nosniff",
+			"x-frame-options": "SAMEORIGIN",
+			"x-request-id": "3696bc7d-da7c-47f8-9907-906ca0e25911",
+			"x-runtime": "0.050741",
+			"x-xss-protection": "1; mode=block",
+			"vary": "Accept-Encoding,Origin",
+			"x-cache": "Miss from cloudfront",
+			"via": "1.1 55532f792bad727448164d061822bdbd.cloudfront.net (CloudFront)",
+			"x-amz-cf-pop": "YTO50-C1",
+			"x-amz-cf-id": "OWvCVAfli9qOfWYMuuTnzCUAoP2KtDsc8pdNeQGGq6o_UoCkyYUqAA=="
+		}
+	}
+}

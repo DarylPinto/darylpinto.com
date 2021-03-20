@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "_variables.scss";
+
+// SEE DOCS FOR MORE:
+// https://bit.ly/30UvE5O
+
+// IMPORT BULMA
+@import "~bulma/bulma.sass";
+
+// IMPORT FONT AWESOME
+@import url("https://use.fontawesome.com/releases/v5.10.1/css/all.css");
+
+/*
+body {
+	// Fix Bulma bug where columns cause
+	// horizontal scroll on mobile.
+	// https://github.com/jgthms/bulma/issues/449
+	@media screen and (max-width: 968px) {
+		overflow-x: hidden;
+	}
+	&.no-scroll {
+		overflow: hidden;
+	}
+	&.no-js {
+		.page-transition-enter {
+			opacity: 1;
+		}
+	}
+}
+*/
+
+.subtitle {
+	line-height: $body-line-height;
+}
+
+#__next {
+	// Full height of screen and flex so that we can push footer
+	// to the bottom even if content is shorter than screen
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	// Push footer to the bottom of the screen
+	> .footer {
+		margin-top: auto;
+	}
+	// Prevent child elements from shrinking when content
+	// is taller than the screen (quirk of having flex parent)
+	> * {
+		flex-shrink: 0;
+	}
+}
+
+// Page change loading bar
+#nprogress {
+	.spinner {
+		display: none;
+		@media #{$desktop-up} {
+			display: block;
+		}
+	}
+}
+
+// Page transitions
+.page-transition-enter {
+	opacity: 0;
+}
+.page-transition-enter-active {
+	opacity: 1;
+	transition: opacity 200ms;
+}
+.page-transition-exit {
+	opacity: 1;
+}
+.page-transition-exit-active {
+	opacity: 0;
+	transition: opacity 200ms;
+}
+
+// Re-Captcha notice is required when the automatically placed badge is hidden
+// https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge.-what-is-allowed
+
+// Hide default recaptcha badge
+.grecaptcha-badge {
+	visibility: hidden;
+	pointer-events: none;
+}
